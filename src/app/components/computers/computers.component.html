@@ -1,0 +1,38 @@
+<div class="form-container">
+  <form
+    class="form-login"
+    [formGroup]="formComputer"
+    (ngSubmit)="saveComputer()"
+  >
+    <mat-form-field class="example-full-width">
+      <mat-label>Marca</mat-label>
+      <input matInput placeholder="Ex. Lenovo" formControlName="brand" />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Memoria</mat-label>
+      <input
+        matInput
+        placeholder="Ex. 4"
+        formControlName="memory"
+        type="number"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Tamaño</mat-label>
+      <input matInput placeholder="Ex. 8.2 pulgadas" formControlName="size" />
+    </mat-form-field>
+
+    <div class="flex-end">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="formComputer.invalid"
+      >
+        Guardar
+      </button>
+    </div>
+  </form>
+</div>

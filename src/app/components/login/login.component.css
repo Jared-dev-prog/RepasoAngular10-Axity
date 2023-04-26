@@ -1,0 +1,17 @@
+.form-login {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

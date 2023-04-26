@@ -1,0 +1,47 @@
+<button mat-raised-button color="primary" routerLink="/computers">
+  <mat-icon>add</mat-icon> Agregar
+</button>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- ID Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>ID</th>
+    <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+  </ng-container>
+
+  <!-- Brand Column -->
+  <ng-container matColumnDef="brand">
+    <th mat-header-cell *matHeaderCellDef>Brand</th>
+    <td mat-cell *matCellDef="let element">{{ element.brand }}</td>
+  </ng-container>
+
+  <!-- Memory Column -->
+  <ng-container matColumnDef="memory">
+    <th mat-header-cell *matHeaderCellDef>Memory</th>
+    <td mat-cell *matCellDef="let element">{{ element.memory }}</td>
+  </ng-container>
+
+  <!-- Size Column -->
+  <ng-container matColumnDef="size">
+    <th mat-header-cell *matHeaderCellDef>Size</th>
+    <td mat-cell *matCellDef="let element">{{ element.size }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Acciones</th>
+    <td mat-cell *matCellDef="let element">
+      <button
+        mat-icon-button
+        color="primary"
+        (click)="editComputer(element.id)"
+      >
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" (click)="deleteComputer(element.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>

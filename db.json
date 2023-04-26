@@ -1,0 +1,22 @@
+{
+  "computers": [
+    {
+      "id": "4i24sdswe4p",
+      "brand": "HP",
+      "memory": 8,
+      "size": "18 pulgadas"
+    },
+    {
+      "id": "il5q4p375a",
+      "brand": "Lenovo",
+      "memory": 12,
+      "size": "23 pulgadas"
+    },
+    {
+      "id": "dnsvgek7vqm",
+      "brand": "Dell",
+      "memory": 32,
+      "size": "14 pulgadas"
+    }
+  ]
+}
